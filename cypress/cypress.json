@@ -1,0 +1,5 @@
+{
+    "baseUrl": "http://server:8080/WebGoat",
+    "viewportHeight": 900,
+    "viewportWidth": 1440
+}

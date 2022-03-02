@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config
+sudo usermod -aG vboxsf $USER
+sudo apt-get -y install ufw
+sudo ufw enable
+sudo ufw allow in from any to any port 22
