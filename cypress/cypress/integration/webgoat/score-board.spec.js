@@ -24,7 +24,7 @@ describe('Test de seguridad de WebGoat', () => {
     cy.wait(3000)
   })
 
-  it('Bypass del login', () => {
+  it('A2 - Broken Authentication - Authentication Bypasses - 2FA Password Reset', () => {
     cy.visit(
         '/start.mvc#lesson/AuthBypass.lesson/1'
     )
@@ -52,7 +52,7 @@ describe('Test de seguridad de WebGoat', () => {
     cy.get('.assignment-success').should('be.visible')
   })
 
-  it('Recovery question', () => {
+  it('A2 - Broken Authentication - Password Reset - Security Questions', () => {
     cy.visit(
         '/start.mvc#lesson/PasswordReset.lesson/3'
     )
@@ -68,7 +68,7 @@ describe('Test de seguridad de WebGoat', () => {
   })
 
 
-  it('Relying in obscurity', () => {
+  it('A5 - Broken Access Control - Missing Function Level Access Control - Gathering User Info', () => {
     cy.visit(
         '/start.mvc#lesson/MissingFunctionAC.lesson/2'
     )
@@ -104,7 +104,7 @@ describe('Test de seguridad de WebGoat', () => {
 
   })
 
-  it('Try It! Numeric SQL injection', () => {
+  it('A1 - Injection - Sql Injection (Intro) - Numeric SQL injection', () => {
     cy.visit(
       '/start.mvc#lesson/SqlInjection.lesson/9'
     )
@@ -124,7 +124,7 @@ describe('Test de seguridad de WebGoat', () => {
     cy.get('.assignment-success').should('be.visible')
   })
 
-  it('Try It! Numeric SQL injection', () => {
+  it('A3 - Sensitive Data Exposure - Insecure Login - Insecure Login', () => {
     cy.visit(
       '/start.mvc#lesson/InsecureLogin.lesson/1'
     )
@@ -147,7 +147,7 @@ describe('Test de seguridad de WebGoat', () => {
     })
   })
 
-  it('XXE', () => {
+  it('A4 - Xml External Entities - XXE - XXE', () => {
     cy.visit(
       '/start.mvc#lesson/XXE.lesson/3'
     )
@@ -169,7 +169,7 @@ describe('Test de seguridad de WebGoat', () => {
     cy.get('.assignment-success').should('be.visible')
   })
 
-  it('Cross Site Scripting', () => {
+  it('A7 - Cross Site Scripting (XSS) - Cross Site Scripting - Reflected XSS', () => {
     cy.visit(
       '/start.mvc#lesson/CrossSiteScripting.lesson/6'
     )
@@ -187,7 +187,7 @@ describe('Test de seguridad de WebGoat', () => {
     cy.get('.attack-feedback').should('contain.text', "Congratulations")
   })
 
-  it('Insecure serialization', () => {
+  it('A8 - Insecure Serialization - Insecure Serialization', () => {
     cy.visit(
       '/start.mvc#lesson/InsecureDeserialization.lesson/4'
     )
@@ -201,7 +201,7 @@ describe('Test de seguridad de WebGoat', () => {
     cy.get('.attack-feedback').should('contain.text', "Congratulations")
   })
 
-  it('Cross Site Request Forgery', () => {
+  it('A8 (2013) - Cross Site Request Forgery - Confirm Flag', () => {
     cy.visit(
       '/start.mvc#lesson/CSRF.lesson/2'
     )
@@ -233,7 +233,7 @@ describe('Test de seguridad de WebGoat', () => {
       })
   })  
 
-  it('Decoding a JWT token', () => {
+  it('A2 - Broken Authentication - JWT Tokens - Decoding a JWT token', () => {
     cy.visit('/start.mvc#lesson/JWT.lesson/2')
 
     cy.wait(3000)
@@ -252,7 +252,7 @@ describe('Test de seguridad de WebGoat', () => {
       }));
   })
   
-  it('Server Side Request Forgery', () => {
+  it('A10 (2021) - Server Side Request Forgery - Show Jerry', () => {
     cy.visit('/start.mvc#lesson/SSRF.lesson/1')
 
     cy.wait(3000)
@@ -274,4 +274,3 @@ describe('Test de seguridad de WebGoat', () => {
     cy.get('#user-and-info-nav > .dropdown > .dropdown-menu > :nth-child(1) > a').click()
   })
 })
-
