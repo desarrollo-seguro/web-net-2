@@ -187,7 +187,7 @@ describe('Test de seguridad de WebGoat', () => {
     cy.get('.attack-feedback').should('contain.text', "Congratulations")
   })
 
-  it('A8 - Insecure Serialization - Insecure Serialization', () => {
+  xit('A8 - Insecure Serialization - Insecure Serialization', () => {
     cy.visit(
       '/start.mvc#lesson/InsecureDeserialization.lesson/4'
     )
